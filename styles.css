@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+   --color-primary: #de5629;
+   --color-secondary: #6c757d;
+   --color-success: #101010;
+   --color-danger: #1943d0c7;
+}
+
+* {
+   box-sizing: border-box;
+   min-width: 0;
+}
+
+body {
+   min-height: 100dvh;
+   background-color: #F3F5FC;
+   font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   text-wrap: balance;
+}
+
+h1 {
+   font-size: 24px;
+   font-variation-settings: 'wght' 900;
+   color: var(--color-primary);
+   margin-right: 24px;
+}
+
+p {
+   text-wrap: pretty;
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   height: 96px;
+   align-items: center;
+   margin-bottom: 56px;
+
+}
+
+textarea {
+   height: 40vh;
+   width: 100%;
+   overflow-y: auto;
+   border: hidden;
+   background-color: transparent;
+   color: var(--color-primary);
+   color: inherit;
+   font: inherit;
+   text-align: left;
+   overflow: hidden;
+   padding: 12px;
+   font-size: 24px;
+   color: var(--color-primary);
+}
+
+textarea::placeholder {
+   text-align: center;
+   font-size: 32px;
+   color: var(--color-primary);
+
+}
+
+button {
+   padding: 12px 24px;
+   border: none;
+   border-radius: 24px;
+   background-color: var(--color-primary);
+   color: white;
+   cursor: pointer;
+   width: 100%;
+   height: 67px;
+   margin-bottom: 24px;
+   font-size: 16px; 
+   font-variation-settings: 'wght' 200;
+}
+
+
+.logo {
+   max-height: 48px;
+   margin: 24px 16px;
+}
+
+
+.texto_ayuda_entrada_texto {
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   gap: 8px;
+   font-size: 12px;
+   color: #495057;
+   padding: 12px;;
+}
+
+#boton_desencriptar {
+   background-color: transparent;
+   border:solid 1px var(--color-primary);
+   color: var(--color-primary);
+}
+
+#boton_encriptar:hover {
+   background-color: #db8030;
+} 
+
+#boton_desencriptar:hover {
+   background-color: #EFF1FA;
+   
+}
+.boton_copiar{ 
+   position: relative;
+   background-color: transparent;
+   border:solid 1px var(--color-primary);
+   color: var(--color-primary);
+   display: none;
+}
+.boton_copiar::after {
+   content: attr(data-tooltip);
+   position: absolute;
+   bottom: 115%; /* Posición del tooltip */
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: var(--color-danger);
+   color: #fff;
+   padding: 12px;
+   border-radius: 25px;
+   white-space: nowrap;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s;
+}
+
+.boton_copiar.show-tooltip::after {
+   opacity: 1;
+   visibility: visible;
+}
+.ilustracion_texto_salida{
+   display: none;
+   width: 100%;
+   height: auto;
+   object-fit: fill;
+}
+.seccion_salida_texto{
+   background-color: rgb(255, 255, 255);
+    padding: 32px;
+    border-radius: 32px;
+    box-shadow: 0px 19px 45px -18px rgba(93, 93, 93, 1);
+    margin: 60px 20px 40px 20px;
+    height: auto;
+    color: var(--color-success)
+}
+
+
+
+.titulo_texto_ayuda_salida{
+   font-size: 24px;
+   font-weight: 900;
+   text-align: center;
+}
+.subtitulo_texto_ayuda_salida{
+   font-size: 16px;
+   font-weight: 300;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+   .seccion_botones{
+       display: flex;
+       flex-direction: row;
+       gap: 24px;
+       align-items: center;
+       justify-content: center;
+ 
+   }
+   .seccion_salida_texto{
+      
+      margin: 60px 40px 60px 40px;
+   }
+ }
+ 
+ @media (min-width: 1024px) {
+
+   header {
+      
+      margin-bottom: 0
+
+   
+   }
+   h1{
+      margin-right: 45%;
+   }
+   textarea{
+      height: 70vh;
+   }
+   .seccion_entrada_texto{
+      padding: 0px 80px 0px 100px;
+      width: 60%;
+      
+   }
+    
+   .seccion_botones{
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+
+  }
+   
+   .contenedor_encriptador{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      height: auto;
+      }
+
+   .ilustracion_texto_salida{
+         display: initial;
+      }
+   .seccion_salida_texto{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+       height: 90vh;
+       transform: translateY(-70px);
+       margin: 0;
+       width: 40%;
+      }   
+   
+ }
