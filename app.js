@@ -50,7 +50,7 @@ function mostrarResultado(texto) {
     const botonCopiar = document.querySelector('.boton_copiar');
     const ilustracion = document.querySelector('.ilustracion_texto_salida');
 
-    titulo.textContent = "TEXTO ENCRIPTADO:";
+    titulo.textContent = "Texto transformado:";
     encriptacion.textContent = texto;
     botonCopiar.style.display = 'block';// Muestra el botón de copiar
     ilustracion.style.display = 'none'; // Retira la ilustracion   
