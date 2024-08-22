@@ -82,7 +82,18 @@ button {
    font-variation-settings: 'wght' 200;
 }
 
-
+footer{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
+   padding: 12 16px;
+   background-color: var(--color-primary);
+   color: white;
+   font-size: 16px;
+   font-variation-settings: 'wght' 600;
+}
 .logo {
    max-height: 48px;
    margin: 24px 16px;

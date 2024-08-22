@@ -15,36 +15,40 @@
     </header>
     <main>
         <div class="contenedor_encriptador">
-        
-        <div class="seccion_entrada_texto">
-            <section>
-                <textarea class="entrada_texto_usuario" placeholder="Ingrese el texto aqui" required rows="20">
+
+            <div class="seccion_entrada_texto">
+                <section>
+                    <textarea class="entrada_texto_usuario" placeholder="Ingrese el texto aqui" required rows="20">
         </textarea>
-                <div class="texto_ayuda_entrada_texto">
-                    <img src="./assets/exclamacion.svg" alt="simbolo de exclamacion">
-                    <label for="message" class="help-text">Solo letras minúsculas y sin acentos</label>
+                    <div class="texto_ayuda_entrada_texto">
+                        <img src="./assets/exclamacion.svg" alt="simbolo de exclamacion">
+                        <label for="message" class="help-text">Solo letras minúsculas y sin acentos</label>
+                    </div>
+                </section>
+
+                <div class="seccion_botones">
+                    <button id="boton_encriptar" type="button">Encriptar</button>
+                    <button id="boton_desencriptar" type="button">Desencriptar</button>
                 </div>
-        </section>
-        
-        <div class="seccion_botones">
-            <button id="boton_encriptar" type="button">Encriptar</button>
-            <button id="boton_desencriptar" type="button">Desencriptar</button>
-        </div>
-        </div>
-        
-        <div class="seccion_salida_texto">
-            <img class="ilustracion_texto_salida" src="./assets/ilustracion_texto_salida.png" alt="ilustracion de una mujer">
-            <span>
-            <p class="titulo_texto_ayuda_salida"> Ningún mensaje fue encontrado</p>
-            <p class="subtitulo_texto_ayuda_salida"> Ingresa el texto que desees encriptar o desencriptar.</p>
-            </span>
-            <button class="boton_copiar" data-tooltip="Texto copiado al portapapeles">Copiar</button>
-        </div>
+            </div>
+
+            <div class="seccion_salida_texto">
+                <img class="ilustracion_texto_salida" src="./assets/ilustracion_texto_salida.png"
+                    alt="ilustracion de una mujer">
+                <span>
+                    <p class="titulo_texto_ayuda_salida"> Ningún mensaje fue encontrado</p>
+                    <p class="subtitulo_texto_ayuda_salida"> Ingresa el texto que desees encriptar o desencriptar.</p>
+                </span>
+                <button class="boton_copiar" data-tooltip="Texto copiado al portapapeles">Copiar</button>
+            </div>
 
         </div>
-
+        <footer>
+            <p>Proyecto creado por Andersson Delgado</p>
+            <p>Bogotá - Colombia </p>
+        </footer>
     </main>
-<script src="./app.js"></script> 
+    <script src="./app.js"></script>
 
 </body>
 
